@@ -9,15 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private let password = "password"
-    private let username = "user"
-
+    // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+
+    // MARK: - Private properties
+    private let password = "password"
+    private let username = "user"
     
+    // MARK: - Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         userNameTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
     }
 
+    // MARK: - IB Actions
     @IBAction func LoginButtonPressed() {
         let inputUserName = userNameTextField.text ?? ""
         let inputPassword = passwordTextField.text ?? ""
@@ -39,9 +42,9 @@ class ViewController: UIViewController {
         if inputUserName == username && inputPassword == password {
             performSegue(withIdentifier: "welcomeSegue", sender: nil)
         } else {
-            showAlert(title: "Invalid username or Password",
-                      massage: "Please, enter correct username and password",
-                      style: .alert)
+            showAlert(title: "Invalid username or password",
+                      massage: "Please, enter correct user name and password")
+            passwordTextField.text = ""
         }
     }
     
@@ -49,28 +52,28 @@ class ViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    @IBAction func ForgotPasswordButtonPressed() {
+    @IBAction func forgotPasswordButtonPressed() {
         showAlert(title: "Password is",
-                  massage: password,
-                  style: .alert)
+                  massage: password)
     }
     
-    @IBAction func ForgotUserNameButtonPressed() {
+    @IBAction func forgotUserNameButtonPressed() {
         showAlert(title: "User name is",
-                  massage: username,
-                  style: .alert)
+                  massage: username)
     }
     
-    private func showAlert(title: String, massage: String, style: UIAlertController.Style){
+    // MARK: - Private methods
+    private func showAlert(title: String, massage: String){
         let alert = UIAlertController(title: title,
                                       message: massage,
-                                      preferredStyle: style)
+                                      preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок",
                                       style: .default))
         self.present(alert, animated: true)
     }
 }
 
+// MARK: - Extentions
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField {
@@ -79,7 +82,6 @@ extension ViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
             LoginButtonPressed()
         }
-        
         return true
     }
 }

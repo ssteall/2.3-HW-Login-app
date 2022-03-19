@@ -37,7 +37,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpH-Ti-iYx">
                                         <rect key="frame" x="0.0" y="120.00000000000001" width="334" height="35.666666666666671"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                        <buttonConfiguration key="configuration" style="plain" title="Log in" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -47,24 +47,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FmT-AO-nbw">
                                         <rect key="frame" x="0.0" y="185.66666666666669" width="334" height="31"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-qc-4DI">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEl-QC-4Jo">
                                                 <rect key="frame" x="0.0" y="0.0" width="157" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Forgot password">
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot user name?" titleAlignment="center">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="ForgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="DW4-my-Mar"/>
+                                                    <action selector="forgotUserNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ah7-9u-jgQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEl-QC-4Jo">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-qc-4DI">
                                                 <rect key="frame" x="177" y="0.0" width="157" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="ForgotUserNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ah7-9u-jgQ"/>
+                                                    <action selector="forgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="DW4-my-Mar"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -101,21 +101,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e75-B1-yo6">
-                                <rect key="frame" x="176" y="160" width="62" height="68.333333333333314"/>
+                                <rect key="frame" x="176" y="254.99999999999997" width="62" height="68.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="57"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tn-5g-EfK">
-                                <rect key="frame" x="146.66666666666666" y="89" width="120.99999999999997" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="139.33333333333337" y="194" width="135.66666666666663" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ0-RH-ydH">
-                                <rect key="frame" x="169" y="731" width="76" height="31"/>
+                                <rect key="frame" x="161.33333333333334" y="726.33333333333337" width="91.333333333333343" height="35.666666666666629"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="LogOutButtonPressed" destination="ckb-aR-kuy" eventType="touchUpInside" id="28z-H6-Keb"/>
                                     <segue destination="Tus-t5-3fp" kind="unwind" unwindAction="unwindFor:" id="2Zb-hn-QTO"/>
@@ -123,14 +126,14 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m72-ey-8TM"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="m72-ey-8TM" firstAttribute="bottom" secondItem="CJ0-RH-ydH" secondAttribute="bottom" constant="100" id="SKW-ne-boe"/>
                             <constraint firstItem="e75-B1-yo6" firstAttribute="centerX" secondItem="2Jc-1I-XTN" secondAttribute="centerX" id="UEP-AS-pD8"/>
                             <constraint firstItem="1tn-5g-EfK" firstAttribute="centerX" secondItem="2Jc-1I-XTN" secondAttribute="centerX" id="WmZ-sz-TM9"/>
                             <constraint firstItem="CJ0-RH-ydH" firstAttribute="centerX" secondItem="2Jc-1I-XTN" secondAttribute="centerX" id="g2k-EL-hWP"/>
-                            <constraint firstItem="e75-B1-yo6" firstAttribute="top" secondItem="1tn-5g-EfK" secondAttribute="bottom" constant="50" id="mf7-Dx-K3t"/>
-                            <constraint firstItem="1tn-5g-EfK" firstAttribute="top" secondItem="m72-ey-8TM" secondAttribute="top" constant="45" id="wIA-Fn-9eO"/>
+                            <constraint firstItem="e75-B1-yo6" firstAttribute="top" secondItem="1tn-5g-EfK" secondAttribute="bottom" constant="40" id="mf7-Dx-K3t"/>
+                            <constraint firstItem="1tn-5g-EfK" firstAttribute="top" secondItem="m72-ey-8TM" secondAttribute="top" constant="150" id="wIA-Fn-9eO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gNf-va-6kU"/>
