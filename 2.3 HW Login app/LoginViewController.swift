@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 
     // MARK: - IB Actions
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Extentions
-extension ViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField {
             passwordTextField.becomeFirstResponder()

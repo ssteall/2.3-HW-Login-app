@@ -37,10 +37,4 @@ class WelcomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
     }
-    
-    // MARK: - IB Actions
-    @IBAction func LogOutButtonPressed() {
-        dismiss(animated: true)
-    }
-    
 }
