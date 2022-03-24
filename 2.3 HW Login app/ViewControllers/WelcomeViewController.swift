@@ -29,7 +29,7 @@ class WelcomeViewController: UIViewController {
     // MARK: - Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeTextLabel.text = ("Welcome, \(userName!)!")
+        welcomeTextLabel.text = "Welcome, \(userName!)!"
         gradientLayer = CAGradientLayer()
         view.layer.insertSublayer(gradientLayer, at: 0)
     }

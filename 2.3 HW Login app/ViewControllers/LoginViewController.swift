@@ -9,13 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var user = User.getUser()
+    
     // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
     // MARK: - Private properties
-    private let password = "password"
-    private let username = "user"
+    //private let password = "password"
+    //private let username = "user"
     
     // MARK: - Override functions
     override func viewDidLoad() {
@@ -25,8 +27,17 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTextField.text
+        let tabBarController = segue.destination as! UITabBarController
+        
+        for viewController in tabBarController.viewControllers! {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user.userName
+            }
+            if let resumeVC = viewController as? ResumeViewController {
+                resumeVC.user = user
+            }
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -39,7 +50,7 @@ class LoginViewController: UIViewController {
         let inputUserName = userNameTextField.text ?? ""
         let inputPassword = passwordTextField.text ?? ""
         
-        if inputUserName == username && inputPassword == password {
+        if inputUserName == user.userName && inputPassword == user.password {
             performSegue(withIdentifier: "welcomeSegue", sender: nil)
         } else {
             showAlert(title: "Invalid username or password",
@@ -54,12 +65,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPasswordButtonPressed() {
         showAlert(title: "Password is",
-                  massage: password)
+                  massage: user.password)
     }
     
     @IBAction func forgotUserNameButtonPressed() {
         showAlert(title: "User name is",
-                  massage: username)
+                  massage: user.password)
     }
     
     // MARK: - Private methods
