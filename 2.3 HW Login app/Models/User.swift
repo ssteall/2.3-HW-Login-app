@@ -32,7 +32,7 @@ struct User {
                                                     description: "И снова работа с гос сектором")],
                             skill: ["ms office", "jira", "confluence", "asana", "agile"],
                             hobby: ["Snowboarding", "surfing"],
-                            about: "lorem",
+                            about: "Тут должно быть что-то интересное, но не сегодня",
                             education: [Education(startYear: 2011,
                                                   endYear: 2015,
                                                   typeOfEducation: .bachelorsDegree,

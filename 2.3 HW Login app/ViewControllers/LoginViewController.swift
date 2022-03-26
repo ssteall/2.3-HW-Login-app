@@ -35,7 +35,6 @@ class LoginViewController: UIViewController {
                 resumeVC.user = user
             }
         }
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
