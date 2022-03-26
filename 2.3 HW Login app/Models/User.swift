@@ -6,9 +6,9 @@
 //
 
 struct User {
-    var userName: String
-    var password: String
-    var person: Person
+    let userName: String
+    let password: String
+    let person: Person
     
     static func getUser() -> User {
         User(userName: "user",
@@ -47,34 +47,34 @@ struct User {
 }
 
 struct Person {
-    var photo: String
-    var name: String
-    var surname: String
-    var age: Int
-    var city: String
-    var contactNumber: String
-    var email: String
-    var expirience: [Expirience]
-    var skill: [String]
-    var hobby: [String]
-    var about: String
-    var education: [Education]
+    let photo: String
+    let name: String
+    let surname: String
+    let age: Int
+    let city: String
+    let contactNumber: String
+    let email: String
+    let expirience: [Expirience]
+    let skill: [String]
+    let hobby: [String]
+    let about: String
+    let education: [Education]
 }
 
 struct Expirience {
-    var startYear: Int
-    var endYear: Int
-    var organization: String
-    var position: String
-    var description: String
+    let startYear: Int
+    let endYear: Int
+    let organization: String
+    let position: String
+    let description: String
 }
 
 struct Education {
-    var startYear: Int
-    var endYear: Int
-    var typeOfEducation: TypeOfEducation
-    var educationalOrganization: String
-    var specialization: String
+    let startYear: Int
+    let endYear: Int
+    let typeOfEducation: TypeOfEducation
+    let educationalOrganization: String
+    let specialization: String
 }
 
 enum TypeOfEducation: String {

@@ -13,7 +13,8 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeTextLabel: UILabel!
     
     // MARK: - public properties
-    var userName: String!
+    var name: String!
+    var surname: String!
     
     // MARK: - private properties
     private var gradientLayer: CAGradientLayer! {
@@ -29,12 +30,12 @@ class WelcomeViewController: UIViewController {
     // MARK: - Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeTextLabel.text = "Welcome, \(userName!)!"
+        welcomeTextLabel.text = "Welcome, \(name!) \(surname!)!"
         gradientLayer = CAGradientLayer()
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
-    override func viewDidLayoutSubviews() {
+    override func viewDidLayoutSubviews() { 
         gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
     }
 }

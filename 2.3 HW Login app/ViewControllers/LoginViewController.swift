@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
         let tabBarController = segue.destination as! UITabBarController
         for viewController in tabBarController.viewControllers! {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.userName
+                welcomeVC.name = user.person.name
+                welcomeVC.surname = user.person.surname
             }
             if let navigationVC = viewController as? UINavigationController {
                 let resumeVC = navigationVC.topViewController as! ResumeViewController
