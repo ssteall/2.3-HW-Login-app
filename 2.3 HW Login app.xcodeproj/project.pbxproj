@@ -16,6 +16,7 @@
 		BCCF2B8327E60CFF0031A449 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF2B8227E60CFF0031A449 /* WelcomeViewController.swift */; };
 		BCCF2BB127E935FF0031A449 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF2BB027E935FF0031A449 /* User.swift */; };
 		BCCF2BB327ED0B740031A449 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF2BB227ED0B740031A449 /* ResumeViewController.swift */; };
+		BCCF2BB527EE826E0031A449 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF2BB427EE826E0031A449 /* EducationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BCCF2B8227E60CFF0031A449 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BCCF2BB027E935FF0031A449 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCCF2BB227ED0B740031A449 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		BCCF2BB427EE826E0031A449 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				BCCF2B7227E545720031A449 /* LoginViewController.swift */,
 				BCCF2BB227ED0B740031A449 /* ResumeViewController.swift */,
 				BCCF2B8227E60CFF0031A449 /* WelcomeViewController.swift */,
+				BCCF2BB427EE826E0031A449 /* EducationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				BCCF2B7327E545720031A449 /* LoginViewController.swift in Sources */,
 				BCCF2B8327E60CFF0031A449 /* WelcomeViewController.swift in Sources */,
+				BCCF2BB527EE826E0031A449 /* EducationViewController.swift in Sources */,
 				BCCF2B6F27E545720031A449 /* AppDelegate.swift in Sources */,
 				BCCF2BB327ED0B740031A449 /* ResumeViewController.swift in Sources */,
 				BCCF2BB127E935FF0031A449 /* User.swift in Sources */,
