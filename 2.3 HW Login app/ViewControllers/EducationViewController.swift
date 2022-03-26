@@ -61,5 +61,7 @@ class EducationViewController: UIViewController {
                                      width: self.view.bounds.size.width,
                                      height: self.view.safeAreaInsets.top + 20 + universityPhoto.frame.size.height / 2)
         gradientLayer.cornerRadius = 20
+        gradientLayer.maskedCorners = [.layerMaxXMaxYCorner,
+                                       .layerMinXMaxYCorner]
     }
 }
