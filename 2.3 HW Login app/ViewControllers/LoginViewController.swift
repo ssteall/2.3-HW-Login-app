@@ -9,15 +9,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    var user = User.getUser()
     
     // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
-    // MARK: - Private properties
-    //private let password = "password"
-    //private let username = "user"
+    // MARK: - public properties
+    var user = User.getUser()
     
     // MARK: - Override functions
     override func viewDidLoad() {

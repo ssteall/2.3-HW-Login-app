@@ -9,12 +9,7 @@ import UIKit
 
 class EducationViewController: UIViewController {
 
-    var university: String!
-    var specialization: String!
-    var eduLevel: String!
-    var eduStartYear: Int!
-    var eduEndYear: Int!
-    
+    // MARK: - IB Outlets
     @IBOutlet var universityPhoto: UIImageView! {
         didSet {
             universityPhoto.layer.cornerRadius = universityPhoto.frame.size.height / 2
@@ -28,6 +23,15 @@ class EducationViewController: UIViewController {
     @IBOutlet var educationLevel: UILabel!
     @IBOutlet var trainingPeriod: UILabel!
     
+    // MARK: - Public properties
+    var university: String!
+    var specialization: String!
+    var eduLevel: String!
+    var eduStartYear: Int!
+    var eduEndYear: Int!
+    
+    
+    // MARK: -  Private properties
     private var gradientLayer: CAGradientLayer! {
         didSet {
             gradientLayer.startPoint = CGPoint(x: 0, y: 0)
@@ -38,6 +42,7 @@ class EducationViewController: UIViewController {
         }
     }
     
+    // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientLayer = CAGradientLayer()

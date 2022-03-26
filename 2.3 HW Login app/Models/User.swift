@@ -5,9 +5,6 @@
 //  Created by Дмитрий Мирошников on 22.03.2022.
 //
 
-import Foundation
-import UIKit
-
 struct User {
     var userName: String
     var password: String
