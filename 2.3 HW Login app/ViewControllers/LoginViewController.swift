@@ -28,12 +28,12 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
-        
         for viewController in tabBarController.viewControllers! {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = user.userName
             }
-            if let resumeVC = viewController as? ResumeViewController {
+            if let navigationVC = viewController as? UINavigationController {
+                let resumeVC = navigationVC.topViewController as! ResumeViewController
                 resumeVC.user = user
             }
         }
@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotUserNameButtonPressed() {
         showAlert(title: "User name is",
-                  massage: user.password)
+                  massage: user.userName)
     }
     
     // MARK: - Private methods

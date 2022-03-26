@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct User {
     var userName: String
@@ -15,7 +16,8 @@ struct User {
     static func getUser() -> User {
         User(userName: "user",
              password: "password",
-             person: Person(name: "Дмитрий",
+             person: Person(photo: "Profile",
+                            name: "Дмитрий",
                             surname: "Мирошников",
                             age: 27,
                             city: "Москва",
@@ -25,7 +27,7 @@ struct User {
                                                     endYear: 2021,
                                                     organization: "IBS",
                                                     position: "IT project manager",
-                                                    description: "работа в гос сектор - тоска смертная"),
+                                                    description: "работа c гос сектором - тоска смертная"),
                                          Expirience(startYear: 2021,
                                                     endYear: 2022,
                                                     organization: "БСТ",
@@ -38,7 +40,7 @@ struct User {
                                                   endYear: 2015,
                                                   typeOfEducation: .bachelorsDegree,
                                                   educationalOrganization: "МИСиС",
-                                                  specialization: "Прикладная информатика"),
+                                                  specialization: "Прикладная информатика в экономике"),
                                        Education(startYear: 2015,
                                                  endYear: 2017,
                                                  typeOfEducation: .mastersDegree,
@@ -48,6 +50,7 @@ struct User {
 }
 
 struct Person {
+    var photo: String
     var name: String
     var surname: String
     var age: Int
