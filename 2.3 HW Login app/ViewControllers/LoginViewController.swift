@@ -14,8 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
-    // MARK: - public properties
-    var user = User.getUser()
+    // MARK: - private properties
+    private var user = User.getUser()
     
     // MARK: - Override functions
     override func viewDidLoad() {
@@ -30,8 +30,7 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.name = user.person.name
                 welcomeVC.surname = user.person.surname
-            }
-            if let navigationVC = viewController as? UINavigationController {
+            } else if let navigationVC = viewController as? UINavigationController {
                 let resumeVC = navigationVC.topViewController as! ResumeViewController
                 resumeVC.user = user
             }
